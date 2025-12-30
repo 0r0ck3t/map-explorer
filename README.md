@@ -65,15 +65,15 @@ The built files will be in the `dist` directory.
 **2. Single Page Application (SPA) and Asynchronous Loading (AJAX)**
 
 * **In Google Maps:** The map updates without reloading the entire page. Interaction is fluid, similar to a desktop application.
-* **In the project:** We use React and Vite. Applied Technology:** DOM Manipulation and AJAX (via `fetch` or internal Leaflet mechanisms).
+* **In the project:** We use React and Vite. Applied Technology: DOM Manipulation and AJAX (via `fetch` or internal Leaflet mechanisms).
 
 **3. Mercator Projection and Coordinate System**
 
 * **In Google Maps:** The Web Mercator projection is used to transform the spherical globe into a flat 2D map on the screen.
-* **In the project:** Leaflet automatically handles this mathematics. Applied Technology:** Geometric and geospatial transformations.
+* **In the project:** Leaflet automatically handles this mathematics. Applied Technology: Geometric and geospatial transformations.
 
 **4. Vector Rendering (Overlays)**
 
 * **In Google Maps:** Markers, routes, and shapes are drawn over the map using vector technologies (SVG or Canvas/WebGL).
-* **In the project:** React-Leaflet. Applied Technology:** SVG (Scalable Vector Graphics) or HTML5 Canvas.
+* **In the project:** React-Leaflet. Applied Technology: SVG (Scalable Vector Graphics) or HTML5 Canvas.
   
