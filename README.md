@@ -55,22 +55,29 @@ The built files will be in the `dist` directory.
 - **React-Leaflet** - React bindings for Leaflet
 - **OpenStreetMap** - Map tile provider
 
-## Analiză a tehnologiilor și conceptelor din proiect care se regăsesc (conceptual sau direct) în Google Maps
-1. Conceptul de "Slippy Map" (Hărți bazate pe Tile-uri)
-         În Google Maps: Google a revoluționat hărțile web în 2005 prin introducerea conceptului de a încărca harta sub formă de pătrate mici (tiles), de obicei imagini de 256x256 pixeli, care se încarcă dinamic pe măsură ce utilizatorul trage de hartă (drag & drop).
-         În proiect: Folosim Leaflet și OpenStreetMap.
-         Tehnologia aplicată: Sistemul de tiling (mozaicare). Harta nu este o singură imagine gigantică, ci un grid de imagini mici cerute asincron de la server pe baza coordonatelor x, y și z (zoom).
+## Analysis of technologies and concepts within the project that align (conceptually or directly) with Google Maps
 
-2. Single Page Application (SPA) și Încărcare Asincronă (AJAX)
-      În Google Maps: Harta se actualizează fără a reîncărca pagina. Interacțiunea este fluidă, similară cu o aplicație desktop.
-      În proiect: Folosim React și Vite.
-      Tehnologia aplicată: DOM Manipulation și AJAX (prin fetch sau mecanismele interne Leaflet).
-3. Proiecția Mercator și Sistemul de Coordonate
-      În Google Maps: Se folosește proiecția Web Mercator pentru a transforma globul sferic într-o hartă 2D plată pe ecran.
-      În proiectul tău: Leaflet gestionează automat această matematică.
-      Tehnologia aplicată: Transformări geometrice și geospațiale.
-4. Randare Vectorială (Overlay-uri)
-      În Google Maps: Markerii, rutele și formele sunt desenate peste hartă folosind tehnologii vectoriale (SVG sau Canvas/WebGL).
-      În proiectul tău: React-Leaflet.
-      Tehnologia aplicată: SVG (Scalable Vector Graphics) sau HTML5 Canvas.
+**1. The "Slippy Map" Concept (Tile-based Maps)**
+
+* **In Google Maps:** Google revolutionized web mapping in 2005 by introducing the concept of loading the map as small squares (tiles)—typically 256x256 pixel images—that load dynamically as the user pans (drags and drops) the map.
+* **In the project:** We use Leaflet and OpenStreetMap.
+* **Applied Technology:** Tiling system. The map is not a single gigantic image, but a grid of small images requested asynchronously from the server based on x, y, and z (zoom) coordinates.
+
+**2. Single Page Application (SPA) and Asynchronous Loading (AJAX)**
+
+* **In Google Maps:** The map updates without reloading the entire page. Interaction is fluid, similar to a desktop application.
+* **In the project:** We use React and Vite.
+* **Applied Technology:** DOM Manipulation and AJAX (via `fetch` or internal Leaflet mechanisms).
+
+**3. Mercator Projection and Coordinate System**
+
+* **In Google Maps:** The Web Mercator projection is used to transform the spherical globe into a flat 2D map on the screen.
+* **In the project:** Leaflet automatically handles this mathematics.
+* **Applied Technology:** Geometric and geospatial transformations.
+
+**4. Vector Rendering (Overlays)**
+
+* **In Google Maps:** Markers, routes, and shapes are drawn over the map using vector technologies (SVG or Canvas/WebGL).
+* **In the project:** React-Leaflet.
+* **Applied Technology:** SVG (Scalable Vector Graphics) or HTML5 Canvas.
   
