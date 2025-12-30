@@ -60,7 +60,7 @@ The built files will be in the `dist` directory.
 **1. The "Slippy Map" Concept (Tile-based Maps)**
 
 * **In Google Maps:** Google revolutionized web mapping in 2005 by introducing the concept of loading the map as small squares (tiles)—typically 256x256 pixel images—that load dynamically as the user pans (drags and drops) the map.
-* **In the project:** We use Leaflet and OpenStreetMap. Applied Technology:** Tiling system. The map is not a single gigantic image, but a grid of small images requested asynchronously from the server based on x, y, and z (zoom) coordinates.
+* **In the project:** We use Leaflet and OpenStreetMap. Applied Technology: Tiling system. The map is not a single gigantic image, but a grid of small images requested asynchronously from the server based on x, y, and z (zoom) coordinates.
 
 **2. Single Page Application (SPA) and Asynchronous Loading (AJAX)**
 
