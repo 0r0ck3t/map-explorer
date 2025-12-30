@@ -55,98 +55,22 @@ The built files will be in the `dist` directory.
 - **React-Leaflet** - React bindings for Leaflet
 - **OpenStreetMap** - Map tile provider
 
-## Future Enhancements
+## Analiză a tehnologiilor și conceptelor din proiect care se regăsesc (conceptual sau direct) în Google Maps
+1. Conceptul de "Slippy Map" (Hărți bazate pe Tile-uri)
+         În Google Maps: Google a revoluționat hărțile web în 2005 prin introducerea conceptului de a încărca harta sub formă de pătrate mici (tiles), de obicei imagini de 256x256 pixeli, care se încarcă dinamic pe măsură ce utilizatorul trage de hartă (drag & drop).
+         În proiect: Folosim Leaflet și OpenStreetMap.
+         Tehnologia aplicată: Sistemul de tiling (mozaicare). Harta nu este o singură imagine gigantică, ci un grid de imagini mici cerute asincron de la server pe baza coordonatelor x, y și z (zoom).
 
-- Real geocoding API integration (e.g., Nominatim, Mapbox Geocoding)
-- Route planning and directions
-- Street view integration
-- Custom map styles
-- Location sharing
-- Saved places/favorites
-
-## Deployment to Vercel
-
-### Option 1: Deploy via Vercel CLI (Recommended)
-
-1. Install Vercel CLI globally:
-```bash
-npm install -g vercel
-```
-
-2. Login to Vercel:
-```bash
-vercel login
-```
-
-3. Deploy your project:
-```bash
-vercel
-```
-
-4. Follow the prompts:
-   - Set up and deploy? **Yes**
-   - Which scope? (Select your account)
-   - Link to existing project? **No**
-   - Project name? (Press Enter for default or type a name)
-   - Directory? (Press Enter for current directory)
-   - Override settings? **No**
-
-5. For production deployment:
-```bash
-vercel --prod
-```
-
-### Option 2: Deploy via GitHub
-
-1. Initialize git repository (if not already done):
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-2. Create a new repository on GitHub
-
-3. Push your code to GitHub:
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-git branch -M main
-git push -u origin main
-```
-
-4. Go to [vercel.com](https://vercel.com) and sign in
-
-5. Click "Add New Project"
-
-6. Import your GitHub repository
-
-7. Vercel will auto-detect Vite settings - just click "Deploy"
-
-### Option 3: Deploy via Vercel Dashboard
-
-1. Go to [vercel.com](https://vercel.com) and sign in
-
-2. Click "Add New Project"
-
-3. Drag and drop your project folder, or connect a Git repository
-
-4. Vercel will automatically detect Vite and configure the build settings
-
-5. Click "Deploy"
-
-### Build Configuration
-
-The project includes a `vercel.json` file with the correct configuration:
-- Build Command: `npm run build`
-- Output Directory: `dist`
-- Framework: `vite`
-
-Vercel will automatically:
-- Install dependencies (`npm install`)
-- Build the project (`npm run build`)
-- Deploy the `dist` folder
-
-## License
-
-MIT
-
+2. Single Page Application (SPA) și Încărcare Asincronă (AJAX)
+      În Google Maps: Harta se actualizează fără a reîncărca pagina. Interacțiunea este fluidă, similară cu o aplicație desktop.
+      În proiect: Folosim React și Vite.
+      Tehnologia aplicată: DOM Manipulation și AJAX (prin fetch sau mecanismele interne Leaflet).
+3. Proiecția Mercator și Sistemul de Coordonate
+      În Google Maps: Se folosește proiecția Web Mercator pentru a transforma globul sferic într-o hartă 2D plată pe ecran.
+      În proiectul tău: Leaflet gestionează automat această matematică.
+      Tehnologia aplicată: Transformări geometrice și geospațiale.
+4. Randare Vectorială (Overlay-uri)
+      În Google Maps: Markerii, rutele și formele sunt desenate peste hartă folosind tehnologii vectoriale (SVG sau Canvas/WebGL).
+      În proiectul tău: React-Leaflet.
+      Tehnologia aplicată: SVG (Scalable Vector Graphics) sau HTML5 Canvas.
+  
